@@ -6,11 +6,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.SeeAllActivity"
-    android:padding="@dimen/_15sdp">
+    android:padding="@dimen/_10sdp">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rcySeeAll"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_height="match_parent"/>
