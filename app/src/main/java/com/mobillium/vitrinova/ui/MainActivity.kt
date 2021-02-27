@@ -29,6 +29,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(view)
 
 
+
         loadFragment(ProductsFragment())
 
         binding.imageViewMic.setOnClickListener {

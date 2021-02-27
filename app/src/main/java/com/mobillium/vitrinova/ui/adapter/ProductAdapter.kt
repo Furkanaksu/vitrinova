@@ -33,7 +33,7 @@ class ProductAdapter(
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val spot = spots?.get(position)
-        holder.parent.animation = AnimationUtils.loadAnimation(holder.itemView.context, R.anim.rcv_enter)
+        holder.parent.animation = AnimationUtils.loadAnimation(holder.itemView.context, R.anim.rcv2_enter)
 
 
         Glide.with(BaseApplication.getContext())

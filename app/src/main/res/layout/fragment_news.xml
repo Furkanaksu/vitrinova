@@ -1,135 +1,150 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
+<LinearLayout
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.fragments.NewsFragment"
+    tools:context=".ui.fragments.ProductsFragment"
+    android:orientation="vertical"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-<androidx.constraintlayout.widget.ConstraintLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    tools:context=".ui.fragments.NewsFragment">
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/slider"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent">
-
-    </androidx.recyclerview.widget.RecyclerView>
-
-    <me.relex.circleindicator.CircleIndicator2
-        android:layout_marginTop="10dp"
-        android:id="@+id/indicator"
-        android:layout_width="match_parent"
-        android:layout_height="20dp"
-        app:layout_constraintBottom_toBottomOf="@+id/slider"/>
-
-    <TextView
-        android:id="@+id/contentHeader1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/slider"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="@dimen/_10sdp"
-        android:layout_marginStart="@dimen/_15sdp"
-        android:fontFamily="@font/medium"/>
-
-
-    <TextView
-        android:id="@+id/contentAll1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/slider"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:text="TÜMÜ >"
-        android:layout_marginTop="@dimen/_10sdp"
-        android:layout_marginEnd="@dimen/_20sdp"
-        android:fontFamily="@font/medium"/>
-
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/slider2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/contentAll1"
-        android:layout_marginTop="@dimen/_10sdp"/>
-
-
-    <TextView
-        android:id="@+id/contentHeader2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/slider2"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="@dimen/_10sdp"
-        android:fontFamily="@font/medium"
-        android:layout_marginStart="@dimen/_20sdp"/>
-
-
-    <TextView
-        android:id="@+id/contentAll2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/slider2"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:text="TÜMÜ >"
-        android:fontFamily="@font/medium"
-        android:layout_marginTop="@dimen/_10sdp"
-        android:layout_marginEnd="@dimen/_20sdp"/>
-
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/slider3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/contentAll2"
-        android:layout_marginTop="@dimen/_10sdp"/>
-
-    <TextView
-        android:id="@+id/contentHeader3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/slider3"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="@dimen/_10sdp"
-        android:fontFamily="@font/medium"
-        android:layout_marginStart="@dimen/_20sdp"/>
-
-
-    <TextView
-        android:id="@+id/contentAll3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/slider3"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:text="TÜMÜ >"
-        android:fontFamily="@font/medium"
-        android:layout_marginTop="@dimen/_10sdp"
-        android:layout_marginEnd="@dimen/_20sdp"/>
-
-    <ImageView
-        android:id="@+id/editorsChoiceField"
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/itemSwipeToRefresh"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="10dp"
-        android:scaleType="fitXY"
-        app:layout_constraintTop_toBottomOf="@+id/contentAll3"
-        app:layout_constraintBottom_toBottomOf="@id/slider4"
-        app:layout_constraintTop_toTopOf="@id/slider4"
-        app:layout_constraintStart_toStartOf="@+id/slider4"
-        app:layout_constraintEnd_toEndOf="@+id/slider4"/>
+        android:layout_weight="1">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:paddingHorizontal="@dimen/_20sdp"
-        android:id="@+id/slider4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/contentAll3"
-        android:layout_marginTop="@dimen/_10sdp"/>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:scrollbars="none">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/slider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <me.relex.circleindicator.CircleIndicator2
+                android:layout_marginTop="10dp"
+                android:id="@+id/indicator"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                app:layout_constraintBottom_toBottomOf="@+id/slider"/>
+
+            <TextView
+                android:id="@+id/contentHeader1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/slider"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:fontFamily="@font/medium"/>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
-</ScrollView>
+            <TextView
+                android:id="@+id/contentAll1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/slider"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="TÜMÜ >"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:fontFamily="@font/medium"/>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/slider2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/contentAll1"
+                android:layout_marginTop="@dimen/_10sdp"/>
+
+
+            <TextView
+                android:id="@+id/contentHeader2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/slider2"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/medium"
+                android:layout_marginStart="@dimen/_20sdp"/>
+
+
+            <TextView
+                android:id="@+id/contentAll2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/slider2"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="TÜMÜ >"
+                android:fontFamily="@font/medium"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_20sdp"/>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/slider3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/contentAll2"
+                android:layout_marginTop="@dimen/_10sdp"/>
+
+            <TextView
+                android:id="@+id/contentHeader3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/slider3"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/medium"
+                android:layout_marginStart="@dimen/_20sdp"/>
+
+
+            <TextView
+                android:id="@+id/contentAll3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/slider3"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="TÜMÜ >"
+                android:fontFamily="@font/medium"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_20sdp"/>
+
+            <ImageView
+                android:id="@+id/editorsChoiceField"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="10dp"
+                android:scaleType="fitXY"
+                app:layout_constraintTop_toBottomOf="@+id/contentAll3"
+                app:layout_constraintBottom_toBottomOf="@id/slider4"
+                app:layout_constraintTop_toTopOf="@id/slider4"
+                app:layout_constraintStart_toStartOf="@+id/slider4"
+                app:layout_constraintEnd_toEndOf="@+id/slider4"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:paddingHorizontal="@dimen/_20sdp"
+                android:id="@+id/slider4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/contentAll3"
+                android:layout_marginTop="@dimen/_10sdp"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</LinearLayout>

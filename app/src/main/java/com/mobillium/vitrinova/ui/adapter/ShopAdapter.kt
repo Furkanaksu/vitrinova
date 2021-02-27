@@ -3,6 +3,7 @@ package com.mobillium.vitrinova.ui.adapter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.AnimationUtils
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
@@ -31,7 +32,7 @@ class ShopAdapter(
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val spot = spots?.get(position)
-//        holder.parent.animation = AnimationUtils.loadAnimation(holder.itemView.context, R.anim.rcv_enter)
+        holder.parent.animation = AnimationUtils.loadAnimation(holder.itemView.context, R.anim.rcv2_enter)
 
 
         Glide.with(BaseApplication.getContext())
