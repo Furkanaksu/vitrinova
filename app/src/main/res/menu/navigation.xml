@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/ProductsFragment" android:title="@string/products" android:icon="@drawable/ic_checkroom"  />
+    <item android:id="@+id/SearchFragment" android:title="@string/explore" android:icon="@drawable/ic_search"/>
+    <item android:id="@+id/NotificationFragment" android:title="@string/notifications" android:icon="@drawable/ic_notification"/>
+</menu>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginHorizontal="@dimen/_30sdp"
+    android:layout_marginVertical="@dimen/_10sdp"
+    android:paddingVertical="@dimen/_10sdp">
+
+        <ImageView
+            android:id="@+id/bigPhoto"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_140sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:scaleType="fitCenter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <ImageView
+            android:id="@+id/screenBlack"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@+id/bigPhoto"
+            app:layout_constraintEnd_toEndOf="@+id/bigPhoto"
+            app:layout_constraintTop_toTopOf="@+id/bigPhoto"
+            app:layout_constraintBottom_toBottomOf="@+id/bigPhoto"
+            android:background="@drawable/rounded_bg"/>
+
+        <TextView
+            android:id="@+id/itemName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@+id/bigPhoto"
+            app:layout_constraintEnd_toEndOf="@+id/bigPhoto"
+            app:layout_constraintTop_toTopOf="@+id/bigPhoto"
+            app:layout_constraintBottom_toBottomOf="@+id/bigPhoto"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12sdp"
+            android:textAllCaps="true"
+            android:padding="@dimen/_10sdp"
+            />
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@+id/desc"
+            app:layout_constraintEnd_toEndOf="@+id/desc"
+            app:layout_constraintTop_toTopOf="@+id/desc"
+            app:layout_constraintBottom_toBottomOf="@+id/desc"
+            android:background="@drawable/rounded_bg"/>
+
+        <TextView
+            android:paddingHorizontal="@dimen/_5sdp"
+            android:paddingVertical="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:id="@+id/desc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@+id/bigPhoto"
+            app:layout_constraintEnd_toEndOf="@+id/bigPhoto"
+            app:layout_constraintTop_toBottomOf="@+id/bigPhoto"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12sdp"
+            android:textAllCaps="true"
+            android:gravity="center"
+            />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

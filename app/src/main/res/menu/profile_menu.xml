@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/sign_in"
+        android:icon="@drawable/ic_notification"
+        android:title="@string/register"
+        />
+    <item
+        android:id="@+id/campaign"
+        android:icon="@drawable/ic_notification"
+        android:title="@string/campaign" />
+    <item
+        android:id="@+id/guide"
+        android:icon="@drawable/ic_notification"
+        android:title="@string/guide" />
+    <item
+        android:id="@+id/other"
+        android:icon="@drawable/ic_notification"
+        android:title="@string/other" />
+</menu>
